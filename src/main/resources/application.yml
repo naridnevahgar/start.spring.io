@@ -23,6 +23,10 @@ spring:
       thread-name-prefix: initializr-
 
 initializr:
+  groupId:
+    value: manulife.jto
+  description:
+    value: Manulife JTO Demo Project
   env:
     boms:
       azure:

@@ -49,6 +49,11 @@ public class StartProjectGenerationConfiguration {
 	}
 
 	@Bean
+	public ManifestFileContributor manifestFileContributor() {
+		return new ManifestFileContributor(description);
+	}
+	
+	@Bean
 	@ConditionalOnRequestedDependency("webflux")
 	public ReactorTestBuildCustomizer reactorTestBuildCustomizer() {
 		return new ReactorTestBuildCustomizer(this.description);
